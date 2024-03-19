@@ -1,0 +1,23 @@
+:stem:
+
+= Practice 1-2
+Author: Adam Disney <adisney1@utk.edu>
+:toc:
+
+== Problem 1
+Work problem 2.1-2 on pages 24-25. ("Consider the procedure SUM-ARRAY...")
+
+== Problem 1 Answer
+*Initialization*: We start by stating the loop invariant. At the start of each
+iteration of the loop, the variable *sum* contains the summation of the elements
+in the subarray stem:[A[1:i-1]].
+Initially, the subarray is empty thus sum starts as the additive
+identity of stem:[0] which is indeed the sum of no elements.
+
+*Maintenance*: At each iteration of the loop, the sum will add the element at
+stem:[A[i]] (line 3) then increment stem:[i] since it's the end of the for loop.
+This makes the current value of sum the summation of elements in
+the subarray stem:[A[1:i-1]]. 
+
+*Termination*: Once the loop terminates, stem:[i = n + 1]. This means that the
+current summation is of elements stem:[A[1:n]]. Hence, the algorithm is correct.
